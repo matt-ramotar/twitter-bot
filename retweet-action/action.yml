@@ -5,4 +5,4 @@ outputs:
     description: Array of string IDs
 runs:
   using: 'node16'
-  main: 'bot.js'
+  main: '../bot.js'
