@@ -39,9 +39,9 @@ jobs:
         SENTIMENT_ANALYSIS_MODEL: ${{ secrets.SENTIMENT_ANALYSIS_MODEL }}
         SENTIMENT_ANALYSIS_MODEL_DEPLOYMENT: ${{ secrets.SENTIMENT_ANALYSIS_MODEL_DEPLOYMENT }}
         SEARCH: ${{ secrets.SEARCH }}
-      uses: matt-ramotar/twitter-bot/retweet-action@master
+      uses: matt-ramotar/twitter-bot/retweet-action@main
 
     - name: Log retweets
       env:
         DID_RETWEET: ${{ steps.retweet-since-last.outputs.didRetweet }}
-      uses: matt-ramotar/twitter-bot/log-action@master
+      uses: matt-ramotar/twitter-bot/log-action@main
