@@ -1,0 +1,8 @@
+name: 'Retweet'
+description: 'DropboxOSS Twitter bot'
+outputs:
+  retweets:
+    description: Array of string IDs
+runs:
+  using: 'node16'
+  main: 'bot.js'
