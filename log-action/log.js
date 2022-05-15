@@ -1,5 +1,5 @@
 import fs from 'fs'
-import oldest from './retweets.js'
+import oldest from '../retweets.js'
 
 function log(){
     const newest = process.env.DID_RETWEET

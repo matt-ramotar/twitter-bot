@@ -1,9 +1,9 @@
 import * as core from '@actions/core';
 import Twitter from 'twitter-api-v2';
-import getSentiment from './getSentiment.js';
-import buildIdToUser from './helpers/buildIdToUser.js';
-import isDropboxer from './helpers/isDropboxer.js';
-import RETWEETS from './retweets.js';
+import getSentiment from '../getSentiment.js';
+import buildIdToUser from '../helpers/buildIdToUser.js';
+import isDropboxer from '../helpers/isDropboxer.js';
+import RETWEETS from '../retweets.js';
 
 const SEARCH = "#DropboxOSS"
 
