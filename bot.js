@@ -5,6 +5,8 @@ import buildIdToUser from './helpers/buildIdToUser.js';
 import isDropboxer from './helpers/isDropboxer.js';
 import RETWEETS from './retweets.js';
 
+const SEARCH = "#DropboxOSS"
+
 async function bot(){
     const searchParams = {
         since_id: RETWEETS[0],
@@ -23,7 +25,7 @@ async function bot(){
     const client = twitter.readWrite;
 
     try {
-        const response = await client.v2.search(process.env.SEARCH, searchParams)
+        const response = await client.v2.search(SEARCH, searchParams)
 
         const tweets = response.data.data
         const users = response.data.includes.users
