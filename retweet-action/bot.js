@@ -31,6 +31,9 @@ async function bot(){
         const users = response.data.includes.users
         const idToUser = buildIdToUser(users)
 
+
+        if (!tweets) return;
+
         const didRetweet = []
         const toInvestigate = []
 
@@ -52,7 +55,7 @@ async function bot(){
                 }
             }
         }
-
+        
         core.setOutput('didRetweet', JSON.stringify(didRetweet))
         core.setOutput('toInvestigate', JSON.stringify(toInvestigate))
     } catch (e) {
