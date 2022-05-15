@@ -7,7 +7,7 @@ function log(){
 
     const latest = [...newest, ...oldest]
     const content = `
-    const retweets = [${latest.map(tweetId => `'${tweetId}'`)}];
+    const retweets = [${latest.map(tweetId => `\"${tweetId}\"`)}];
 
     export default retweets;
     `
@@ -15,8 +15,6 @@ function log(){
     fs.writeFile('./retweets.js', content, err => {
         console.log(err)
     })
-
-    process.exit(-1)
 }
 
 
