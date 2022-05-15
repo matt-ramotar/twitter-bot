@@ -2,7 +2,9 @@ import fs from 'fs'
 import oldest from '../retweets.js'
 
 function log(){
-    const newest = process.env.DID_RETWEET
+    const newestStr = process.env.DID_RETWEET
+    const newest = JSON.parse(newestStr)
+
     const latest = [...newest, ...oldest]
     const content = `
     const retweets = ${latest};
