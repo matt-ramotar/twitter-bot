@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export default async function getSentiment(text) {
     const response = await axios({
-        method: "POST",
+        method: "post",
         url: process.env.SENTIMENT_ANALYSIS_MODEL,
         headers: { Authorization: `Bearer ${process.env.SENTIMENT_ANALYSIS_MODEL_DEPLOYMENT}` },
         data: JSON.stringify({ "inputs": text }),
