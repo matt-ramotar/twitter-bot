@@ -53,6 +53,7 @@ async function bot(){
 
         core.setOutput('didRetweet', JSON.stringify(didRetweet))
         core.setOutput('toInvestigate', JSON.stringify(toInvestigate))
+        process.exit(-1)
     } catch (e) {
         console.log(e)
         process.exit(-1)

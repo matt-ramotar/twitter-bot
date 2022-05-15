@@ -7,6 +7,8 @@ function log(){
     fs.writeFile('./retweets.js', latest, err => {
         console.log(err)
     })
+
+    process.exit(-1)
 }
 
 
