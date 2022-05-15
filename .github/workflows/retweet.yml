@@ -8,6 +8,7 @@ on:
 jobs:
   retweet:
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     environment: env
     name: Retweet
     strategy:
