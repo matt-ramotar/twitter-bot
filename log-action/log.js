@@ -7,7 +7,7 @@ function log(){
 
     const latest = [...newest, ...oldest]
     const content = `
-    const retweets = ${latest};
+    const retweets = [${latest.map(tweetId => `'${tweetId}'`)}];
 
     export default retweets;
     `
