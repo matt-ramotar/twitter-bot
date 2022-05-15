@@ -31,7 +31,6 @@ async function bot(){
         const users = response.data.includes.users
         const idToUser = buildIdToUser(users)
 
-
         if (!tweets) return;
 
         const didRetweet = []
