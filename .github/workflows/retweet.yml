@@ -45,14 +45,16 @@ jobs:
         DID_RETWEET: ${{ steps.retweet-since-last.outputs.didRetweet }}
       uses: matt-ramotar/twitter-bot/log-action@main
 
-    - name: Add & Commit
-      uses: EndBug/add-and-commit@v9.0.0
+    - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        add: '.'
-        ref: 'main'
-        author_name: Matt Ramotar
-        author_email: mramotar@dropbox.com
-        cwd: '.'
-        default_author: github_actor
-        message: 'Commit from GitHub Actions'
-        push: true
+        commit_message: Auto log
+        branch: main
+        commit_options: '--no-verify'
+
+        
+        commit_user_name: Dropbox Twitter Bot
+        commit_user_email: mramotar@dropbox.com
+        push_options: '--force'
+      
+        skip_dirty_check: true    
+        skip_fetch: true    
